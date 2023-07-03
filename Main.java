@@ -1,5 +1,3 @@
-package numbers;
-import RoundButton;
 import java.util.*;
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -9,7 +7,7 @@ import java.awt.event.*;
 class RoundButton extends JButton {
     RoundButton(String text) {
         super(text);
-        setPreferredSize(new Dimension(25, 25)); // Adjust the size as per your requirement
+        setPreferredSize(new Dimension(25, 25));
         setContentAreaFilled(false);
     }
 
@@ -19,7 +17,7 @@ class RoundButton extends JButton {
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setColor(getBackground());
         g2.fillOval(0, 0, getWidth() - 1, getHeight() - 1);
-        g2.setColor(Color.green); // Adjust the color of the button text
+        g2.setColor(Color.green); 
         g2.drawString(getText(), getWidth() / 2 - g2.getFontMetrics().stringWidth(getText()) / 2,
                 getHeight() / 2 + g2.getFontMetrics().getHeight() / 4);
         g2.dispose();
